@@ -1,0 +1,73 @@
+
+
+###
+POST http://127.0.0.1:8000/user/
+Content-Type: application/json
+
+{
+    "username":"akshay",
+    "password":"Akshay@123",
+    "email":"akshay@gmail.com"
+}
+
+###
+GET http://127.0.0.1:8000/user/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/cars/
+Content-Type: application/json
+Authorization: Basic akshay:Akshay@123
+
+{
+   "brand":"volkswagen",
+   "model":"polo",
+   "reg_no":"KL07F2312",
+   "rent_per_day":500,
+   "fuel_type":"petrol"
+}
+
+
+###
+GET http://127.0.0.1:8000/cars/
+Accept: application/json
+Authorization: Basic akshay:Akshay@123
+
+
+
+
+
+
+###
+POST http://127.0.0.1:8000/rental/
+Content-Type: application/json
+Authorization: Basic akshay:Akshay@123
+
+{
+    "car": 1,
+    "start_date": "2026-11-26",
+    "end_date": "2026-11-28"
+}
+
+
+###
+GET http://127.0.0.1:8000/rental/
+Accept: application/json
+Authorization: Basic akshay:Akshay@123
+
+
+
+###
+PUT http://127.0.0.1:8000/rental/1/
+Content-Type: application/json
+Authorization: Basic akshay:Akshay@123
+
+{
+    "car": 1,
+    "start_date": "2026-11-27",
+    "end_date": "2026-11-29"
+}
+
+###
+DELETE http://127.0.0.1:8000/rental/1/
+Authorization: Basic akshay:Akshay@123
